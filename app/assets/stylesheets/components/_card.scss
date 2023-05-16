@@ -1,0 +1,64 @@
+.card-trip {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 364px;
+  border-radius: 8px;
+}
+
+.card-trip > img {
+  height: 232.992px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-trip h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-trip p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-trip .card-trip-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-trip .card-trip-button {
+  position: absolute;
+  right: 14px;
+  top: -65px;
+  padding: 0px 16px;
+  background: #D29A64;
+  border: 1.5px solid #4C6D96;
+  border-radius: 8px;
+  width: 160px;
+  height: 50px;
+
+  // text
+  font-family: 'Hind Siliguri';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: #FFFFFF;
+  vertical-align: baseline;
+}
+
+.card-trip .card-trip-rating {
+  position: absolute;
+  left: 79.56%;
+  right: 6.63%;
+  top: 75%;
+  bottom: 17.81%;
+}
