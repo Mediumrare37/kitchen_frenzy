@@ -13,6 +13,7 @@ class KitchensController < ApplicationController
 
 
   def show
+    @kitchen = Kitchen.find(params[:id])
     authorize @kitchen
   end
 
@@ -35,5 +36,11 @@ class KitchensController < ApplicationController
   def index
     @kitchens = policy_scope(Kitchen)
     @kitchens = Kitchen.all
+
+  private
+
+  def kitchen_params
+    params.require(:kitchen).permit(:details, :location, :price_per_day)
+
   end
 end
