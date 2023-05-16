@@ -18,6 +18,7 @@ puts "Created #{User.count} users!"
 
 5.times do
   john.kitchens << Kitchen.new({
+    title: "John's Kitchen",
     location: Faker::Address.street_address,
     details: "Insert details here",
     price_per_day: rand(1..5) * 100

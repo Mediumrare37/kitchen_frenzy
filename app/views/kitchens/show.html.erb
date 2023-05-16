@@ -1,0 +1,19 @@
+<div class="container">
+  <h1><%= @kitchen.title %></h1>
+  <div class="dynamic-info">
+    <div class="icons">
+      <%= icon("fa-regular", "star") %>
+      <p>4.58</p>
+    </div>
+
+    <div class="icons">
+      <%= icon("fa-regular", "map") %>
+      <p><%= @kitchen.location %></p>
+    </div>
+
+    <div class="icons">
+      <%= icon("fa-regular", "heart") %>
+      <p>Save to Favourites</p>
+    </div>
+  </div>
+</div>
