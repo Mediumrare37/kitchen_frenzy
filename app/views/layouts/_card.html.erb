@@ -6,9 +6,11 @@
   </div>
   <div class="card-info">
     <div class="card-info-details">
-      <h2>Andrew's Kitchen</h2>
-      <p>Beautiful space with all the equipment you need</p>
-      <h3>€ 3,129</h3>
+      <% @kitchens.each do |k| %>
+        <h2><%= k.title %></h2>
+        <p><%= k.location %></p>
+        <h3><%= k.price_per_day %>
+      <% end %>
     </div>
     <div class="card-info-rating">
       <%= icon("fa-solid fa-star", "color: #d29a64" ) %>
