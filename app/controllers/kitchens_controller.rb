@@ -34,5 +34,6 @@ class KitchensController < ApplicationController
 
   def index
     @kitchens = policy_scope(Kitchen)
+    @kitchens = Kitchen.all
   end
 end
