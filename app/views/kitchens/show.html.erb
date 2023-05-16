@@ -16,4 +16,19 @@
       <p>Save to Favourites</p>
     </div>
   </div>
+  <div class="content">
+    <div class="content-img"></div>
+      <%# <img src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"> %>
+    <div class="booking-card">
+      <h3>€<%= @kitchen.price_per_day %> / day</h3>
+      <%= simple_form_for [@kitchen, @booking] do |f| %>
+        <%= f.input :start_date %>
+        <%= f.input :end_date %>
+        <%= f.submit class: "button button-primary brown block"%>
+      <% end %>
+    </div>
+  </div>
+  <div class="details">
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam vero asperiores neque exercitationem necessitatibus harum enim hic fugiat eveniet, ipsam consequatur expedita quidem quas numquam cupiditate accusamus et, eligendi nemo! Reprehenderit impedit amet error est ullam, ad illo in fuga, ipsum repudiandae voluptate possimus inventore praesentium nam. Laudantium, mollitia facere?</p>
+  </div>
 </div>
