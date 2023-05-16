@@ -1,0 +1,21 @@
+<h2>=======================</h2>
+<h1> Please book a kitchen!</h1>
+<h2>=======================</h2>
+
+<%= link_to "Book", "#", class: "btn btn-gradient" %>
+
+<%= form_with(model: [@kitchen, @booking], url: kitchen_bookings_path(@kitchen), local: true) do |form| %>
+  <%= form.label :start_date %>
+  <%= form.date_field :start_date %>
+
+  <%= form.label :start_date %>
+  <%= form.date_feild :start_date %>
+
+  <%= form.label :end_date %>
+  <%= from.date_field :end_date %>
+
+  <%= from.lable :guests %>
+  <%= from.number_field :guests %>
+
+  <%= form.submit 'Book' %>
+<% end %>
