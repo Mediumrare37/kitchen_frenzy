@@ -1,0 +1,26 @@
+.container-category {
+display: flex;
+flex-direction: column;
+}
+
+.container-category h1 {
+  font-size: 25px;
+  font-weight: lighter;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.arrow-button {
+  color: $kitchen-1;
+  font-size: 30px;
+}

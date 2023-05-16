@@ -1,11 +1,12 @@
 class BookingsController < ApplicationController
   def create
-    @kitchen = kitchen.find(params[:kitchen_id])
+    @kitchen = Kitchen.find(params[:kitchen_id])
     @booking = @kitchen.bookings.build(booking_params)
     if @booking.save
-      #task: If a successful booking creating, re-drirect to the confirmation page.
+      redirect_to confirmation_path
     else
-      #render an error page message.
+      render 'error'
+      puts "Sorry, there was an error"
     end
   end
 
@@ -18,5 +19,4 @@ class BookingsController < ApplicationController
   def booking_params
     params.require(:booking).permit(:start_date, :end_date, :guests)
   end
-
 end
