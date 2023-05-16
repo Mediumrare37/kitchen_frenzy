@@ -5,6 +5,7 @@ class KitchensController < ApplicationController
   end
 
   def show
+    @booking = Booking.new
     @kitchen = Kitchen.find(params[:id])
     authorize @kitchen
   end

@@ -1,0 +1,50 @@
+.dynamic-info {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+
+  .icons {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    font: {
+      size: 14px;
+    }
+
+    i {
+      color: $kitchen-1;
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+
+  .content-img {
+    border-radius: 8px;
+    background-image: url("https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png");
+    background-size: cover;
+    flex: 1;
+  }
+
+  .booking-card {
+    padding: 14px;
+    border: 2px solid black;
+    border-radius: 8px;
+    flex: 1;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+}
