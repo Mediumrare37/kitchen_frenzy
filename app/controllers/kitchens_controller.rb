@@ -1,7 +1,7 @@
 class KitchensController < ApplicationController
   def index
-    @kitchens = policy_scope(Kitchen)
     @kitchens = Kitchen.all
+    @kitchens = policy_scope(Kitchen)
   end
 
   def show
