@@ -1,6 +1,6 @@
 class Owner::BookingsController < ApplicationController
   def index
-    @bookings = Booking.where(owner_id: current_owner.id).order(start_date: :desc)
+    @bookings = Booking.where(user_id: current_user.id).order(start_date: :desc)
   end
 
   def create
