@@ -1,8 +1,7 @@
 class Owner::BookingsController < ApplicationController
   def index
-    @bookings = policy_scope(Booking).all.map do |b|
-      b if b.kitchen.user.id == current_user.id
-    end
+    @bookings = current_user.bookings_as_owner
+    policy_scope(Booking)
   end
 
   def create
