@@ -1,4 +1,6 @@
 class KitchensController < ApplicationController
+  skip_before_action :authenticate_user!, only: :show
+
   def index
     @kitchens = policy_scope(Kitchen)
     @kitchens = Kitchen.all

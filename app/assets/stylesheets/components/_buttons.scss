@@ -17,6 +17,7 @@ a.button {
 
 .button-primary {
   background-color: $kitchen-2;
+  border: 0px solid transparent;
   transition: 0.2s ease;
 
   &:hover {
@@ -36,8 +37,4 @@ a.button-secondary {
 
 .brown {
   background-color: $kitchen-1;
-}
-
-.block {
-  display: block;
 }
