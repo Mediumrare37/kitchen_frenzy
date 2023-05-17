@@ -15,7 +15,7 @@ class BookingsController < ApplicationController
   end
 
   def index
-    @bookings = Booking.where(chef_id: current_chef.id).order(start_date: :desc)
+    @bookings = policy_scope(Booking).where(user_id: current_user.id).order(start_date: :desc)
   end
 
   private
