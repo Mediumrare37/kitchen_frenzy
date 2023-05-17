@@ -38,6 +38,12 @@
     box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
   }
 
+  .booking-price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   .booking-card {
     padding: 14px;
     border-radius: 8px;

@@ -10,8 +10,9 @@ class BookingPolicy < ApplicationPolicy
     record.user == user
   end
 
+  # Any user should be allowed to book a kitchen
   def create?
-    record.user == user
+    true
   end
 
   def edit
