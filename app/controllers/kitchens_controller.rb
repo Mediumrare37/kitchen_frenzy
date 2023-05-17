@@ -2,7 +2,7 @@ class KitchensController < ApplicationController
   skip_before_action :authenticate_user!, only: :show
 
   def index
-    @kitchens = Kitchen.all
+    # @kitchens = Kitchen.all
     @kitchens = policy_scope(Kitchen)
 
     # Map display
