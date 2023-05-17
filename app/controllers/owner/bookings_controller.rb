@@ -1,6 +1,7 @@
 class Owner::BookingsController < ApplicationController
   def index
-    @bookings = policy_scope(Booking).all
+    @bookings = current_user.bookings_as_owner
+    policy_scope(Booking)
   end
 
   def create
