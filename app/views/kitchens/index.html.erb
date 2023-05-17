@@ -1,53 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>KITCHEN FRENZY</title>
-  <!-- Add your CSS and JavaScript files here -->
-</head>
-<body>
-  <header>
-    <!-- Navigation bar -->
-    <nav>
-      <!-- Logo and menu items -->
-    </nav>
-  </header>
-
-  <main>
-    <!-- Hero section -->
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Welcome to the Frenzy</h1>
-        <p>Find the perfect kitchen space for your needs.</p>
-        <!-- Search form -->
-        <form action="/search" method="GET">
-          <input type="text" name="location" placeholder="Enter a location">
-          <button type="submit">Search</button>
-        </form>
-      </div>
-    </section>
-
-    <!-- Featured listings section -->
-    <section class="featured-listings">
-      <h2>Featured Listings</h2>
-      <div class="listing-grid">
-        <!-- Display featured kitchen listings here -->
-        <div class="listing">
-          <!-- Listing details (e.g., image, title, price) -->
-        </div>
-        <div class="listing">
-          <!-- Listing details (e.g., image, title, price) -->
-        </div>
-        <!-- Add more listings as needed -->
-      </div>
-    </section>
-
-    <!-- Other sections and content -->
-    <!-- Add more sections and content as needed -->
-  </main>
-
-  <footer>
-    <!-- Footer content -->
-    <p>&copy; 2023 KITCHEN FRENZY. All rights reserved. Thanks.</p>
-  </footer>
-</body>
+  <head>
+    <title>KITCHEN FRENZY</title>
+    <!-- Add your CSS and JavaScript files here -->
+  </head>
+  <body>
+    <%= render 'layouts/card-map-grid' %>
+  </body>
 </html>

@@ -16,10 +16,17 @@ paul = User.create!({:email => "paul@test.com", :password => "pass123", :passwor
 
 puts "Created #{User.count} users!"
 
-5.times do
+require 'yaml'
+require 'open-uri'
+
+addresses_url = 'https://gist.githubusercontent.com/trouni/599e03440e2552e803c54c62916f874c/raw/cc7aff8deeb27c3f22ee501b6723766a8cb68f2b/addresses.yml'
+serialized_addresses = URI.open(addresses_url).read
+addresses = YAML.load(serialized_addresses)
+
+addresses.first(10).each do |address|
   john.kitchens << Kitchen.new({
     title: "John's Kitchen",
-    location: Faker::Address.street_address,
+    location: address,
     details: "Insert details here",
     price_per_day: rand(1..5) * 100
   })
