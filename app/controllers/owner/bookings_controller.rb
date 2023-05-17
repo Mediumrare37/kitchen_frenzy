@@ -1,6 +1,12 @@
 class Owner::BookingsController < ApplicationController
+
+  # def index
+  #   @bookings = policy_scope(Booking).where(user_id: current_user.id).order(start_date: :desc)
+  # end
+
   def index
-    @bookings = Booking.where(user_id: current_user.id).order(start_date: :desc)
+    @bookings = policy_scope(Booking).joins(:kitchen).where(user_id: current_user.id, kitchens: { user_id: current_user.id })
+    # @bookings = policy_scope(Booking).where(user_id: current_user.id).order(start_date: :desc)
   end
 
   def create
