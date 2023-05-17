@@ -1,8 +1,6 @@
 class Owner::BookingsController < ApplicationController
   def index
-    @bookings = policy_scope(Booking).all.map do |b|
-      b if b.kitchen.user.id == current_user.id
-    end
+    @bookings = policy_scope(Booking).all
   end
 
   def create
@@ -20,6 +18,6 @@ class Owner::BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date, :guests)
+    params.require(:booking).permit(:start_date, :end_date)
   end
 end
