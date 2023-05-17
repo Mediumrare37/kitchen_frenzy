@@ -1,4 +1,4 @@
-class BookingsPolicy < ApplicationPolicy
+class BookingPolicy < ApplicationPolicy
   class Scope < Scope
     # NOTE: Be explicit about which records you allow access to!
     def resolve
@@ -10,8 +10,9 @@ class BookingsPolicy < ApplicationPolicy
     record.user == user
   end
 
+  # Any user should be allowed to book a kitchen
   def create?
-    record.user == user
+    true
   end
 
   def edit

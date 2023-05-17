@@ -1,0 +1,37 @@
+<div class="my-3 container">
+  <h1><%= @kitchen.title %></h1>
+  <div class="dynamic-info">
+    <div class="icons">
+      <%= icon("fa-regular", "star") %>
+      <p>4.58</p>
+    </div>
+
+    <div class="icons">
+      <%= icon("fa-regular", "map") %>
+      <p><%= @kitchen.location %></p>
+    </div>
+
+    <div class="icons">
+      <%= icon("fa-regular", "heart") %>
+      <p>Save to Favourites</p>
+    </div>
+  </div>
+  <%= render 'shared/flashes' %>
+  <div class="content">
+    <div class="content-img"></div>
+      <%# <img src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"> %>
+    <div class="booking-card">
+      <h3>€<%= @kitchen.price_per_day %> / day</h3>
+      <div class="booking-price">
+        <p>Total for 30 days</p>
+        <p><strong>€<%= @kitchen.price_per_day * 30 %></strong></p>
+      </div>
+      <%= render 'kitchens/form' %>
+    </div>
+  </div>
+  <div class="details">
+    <h2>Kitchen Description</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam vero asperiores neque exercitationem necessitatibus harum enim hic fugiat eveniet, ipsam consequatur expedita quidem quas numquam cupiditate accusamus et, eligendi nemo! Reprehenderit impedit amet error est ullam, ad illo in fuga, ipsum repudiandae voluptate possimus inventore praesentium nam. Laudantium, mollitia facere?</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae, aliquam deleniti expedita qui eum quidem exercitationem in libero quo, corrupti cumque officiis nihil consequatur vitae explicabo nulla? Molestiae, perferendis qui, error doloribus deserunt expedita tempora placeat repudiandae omnis rem obcaecati.</p>
+  </div>
+</div>
