@@ -1,14 +1,8 @@
 <h1> All my Bookings </h1>
 <% if @bookings.any? %>
-<% @bookings.each do |booking| %>
-  <div>
-    <p>Booking ID: <%= booking.user_id %></p>
-    <p>Start Date: <%= booking.start_date %></p>
-    <p>End Date: <%= booking.end_date %></p>
-    <!-- We can add more -->
+  <div class="cards">
+    <%= render 'bookings/card' %>
   </div>
-  <hr>
-<% end %>
 <% else %>
-<p>You do not have any bookings yet.</p>
+  <p>You do not have any bookings yet.</p>
 <% end %>

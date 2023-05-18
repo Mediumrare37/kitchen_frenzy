@@ -36,13 +36,14 @@
   border: 2px solid #4C6D96;
 }
 
-  .card-info {
-  // display: flex;
-  padding: 8px 10px;
-  // justify-content: space-between;
-  // align-items: flex-end;
-  // position: relative;
-  }
+.card-info {
+// display: flex;
+padding: 12px;
+margin-top: 3px;
+// justify-content: space-between;
+// align-items: flex-end;
+position: relative;
+}
 
 .card-info .card-info-details h2 {
   font-size: 16px;
@@ -93,5 +94,46 @@
 
   i {
     padding-right: 3px;
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
