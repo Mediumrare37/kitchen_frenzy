@@ -1,0 +1,22 @@
+.buttons {
+
+  font-size: 30px;
+
+  a {
+    text-decoration: none;
+  }
+
+  .button-check {
+    color: green;
+  }
+
+  .button-x {
+    color: red;
+  }
+}
+
+.price-button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: first baseline;
+}

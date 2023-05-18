@@ -1,0 +1,18 @@
+<div class="card-map-kitchen">
+  <div class="card-map-image">
+    <%= image_tag "kitchen_industrial.jpg" %>
+    <%= icon("fa-solid", "heart") %>
+    <%= link_to "Book this Kitchen", kitchen_path(k), class: "card-map-image-button button button-primary brown" %>
+  </div>
+  <div class="card-map-info">
+    <div class="card-map-info-details">
+      <h2><%= k.title %></h2>
+      <p><%= k.location %></p>
+      <h3><%= '€' + (k.price_per_day).to_i.to_s + ' per day' %></h3>
+    </div>
+    <div class="card-map-info-rating">
+      <%= icon("fa-solid fa-star", "color: #d29a64" ) %>
+      <p>4.58</p>
+    </div>
+  </div>
+</div>

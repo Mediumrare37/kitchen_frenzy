@@ -3,17 +3,18 @@
     <div class="card-image">
       <%= image_tag "kitchen_industrial.jpg" %>
       <%= icon("fa-solid", "heart") %>
-      <%= link_to "Book this Kitchen", kitchen_path(k), class: "card-image-button button button-primary brown" %>
     </div>
     <div class="card-info">
       <div class="card-info-details">
-        <h2><%= k.title %></h2>
+        <div class="card-info-rating">
+          <h2><%= k.title %></h2>
+          <div class="card-info-icon">
+            <%= icon("fa-solid fa-star", "color: #d29a64" ) %>
+            <p>4.58</p>
+          </div>
+        </div>
         <p><%= k.location %></p>
-        <h3><%= k.price_per_day %>
-      </div>
-      <div class="card-info-rating">
-        <%= icon("fa-solid fa-star", "color: #d29a64" ) %>
-        <p>4.58</p>
+        <h3><strong>€<%= (k.price_per_day).to_i.to_s %></strong> day</h3>
       </div>
     </div>
   </div>
