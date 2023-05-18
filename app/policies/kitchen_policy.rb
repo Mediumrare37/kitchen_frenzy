@@ -7,7 +7,7 @@ class KitchenPolicy < ApplicationPolicy
     true
   end
 
-  def edit
+  def edit?
     record.user == user
   end
 
@@ -15,9 +15,10 @@ class KitchenPolicy < ApplicationPolicy
     record.user == user
   end
 
-  def destroy
+  def destroy?
     record.user == user
   end
+
 
   class Scope < Scope
     # NOTE: Be explicit about which records you allow access to!

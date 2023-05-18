@@ -26,3 +26,68 @@
   color: $kitchen-1;
   font-size: 30px;
 }
+
+.kitchens{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.container-category {
+  display: none;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .kitchens{
+    grid-template-columns: 1fr;
+    display: none;
+  }
+  .container-category {
+    display: block;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .kitchens{
+    grid-template-columns: 1fr;
+    display: none;
+  }
+  .container-category {
+    display: block;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .kitchens{
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+  }
+  .container-category {
+    display: none;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .kitchens{
+    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+  }
+  .container-category {
+    display: none;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .kitchens{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: grid;
+  }
+  .container-category {
+    display: none;
+  }
+}

@@ -1,0 +1,15 @@
+<div class="card-kitchen">
+  <div class="card-image">
+    <%= image_tag "kitchen_industrial.jpg", class: "d-block w-100" %>
+    <%= icon("fa-solid", "heart") %>
+    <%= link_to "Book this Kitchen", kitchen_path(kitchen), class: "card-image-button button button-primary brown" %>
+  </div>
+  <div class="card-info">
+    <div class="card-info-details">
+      <h2><%= kitchen.title %></h2>
+      <p><%= kitchen.location %></p>
+      <h3><%= kitchen.price_per_day %></h3>
+    </div>
+    <div class="card-info-rating">
+      <%= icon("fa-solid fa-star", style: "color: #d29a64") %>
+      <p>4.58</p>
