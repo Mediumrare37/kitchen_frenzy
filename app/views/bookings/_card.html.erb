@@ -1,0 +1,15 @@
+<% @bookings.each do |booking| %>
+  <div class="card-kitchen">
+    <div class="card-image">
+      <%= image_tag "kitchen_industrial.jpg" %>
+    </div>
+    <div class="card-info">
+      <div class="card-info-details">
+        <h2><%= booking.kitchen.title %></h2>
+        <p><%= booking.kitchen.location %></p>
+        <p><%= booking.status %></p>
+        <h3><%= '€' + (booking.kitchen.price_per_day).to_i.to_s + ' per day' %></h3>
+      </div>
+    </div>
+  </div>
+<% end %>

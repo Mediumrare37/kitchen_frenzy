@@ -2,8 +2,16 @@ class KitchensController < ApplicationController
   skip_before_action :authenticate_user!, only: :show
 
   def index
+    # @kitchens = Kitchen.all
     @kitchens = policy_scope(Kitchen)
-    @kitchens = Kitchen.all
+
+    # Map display
+    @markers = @kitchens.geocoded.map do |flat|
+      {
+        lat: flat.latitude,
+        lng: flat.longitude
+      }
+    end
   end
 
   def show

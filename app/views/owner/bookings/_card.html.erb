@@ -1,0 +1,25 @@
+<% @bookings.each do |booking| %>
+  <div class="card-kitchen">
+    <div class="card-image">
+      <%= image_tag "kitchen_industrial.jpg" %>
+    </div>
+    <div class="card-info">
+      <div class="card-info-details">
+        <h2><%= booking.kitchen.title %></h2>
+        <p><%= booking.kitchen.location %></p>
+        <p><%= booking.status %></p>
+        <div class="price-button-container">
+          <h3><%= '€' + (booking.kitchen.price_per_day).to_i.to_s + ' per day' %></h3>
+          <div class="buttons">
+          <%= link_to "#" do %>
+            <%= icon("fa-regular", "circle-check", class: "button-check") %>
+          <% end %>
+          <%= link_to "#" do %>
+            <%= icon("fa-regular", "circle-xmark", class: "button-x") %>
+          <% end %>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

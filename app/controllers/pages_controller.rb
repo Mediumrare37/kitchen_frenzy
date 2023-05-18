@@ -3,5 +3,11 @@ class PagesController < ApplicationController
 
   def home
     @kitchens = Kitchen.all
+    @markers = @kitchens.geocoded.map do |kitchen|
+      {
+        lat: kitchen.latitude,
+        lng: kitchen.longitude
+      }
+    end
   end
 end

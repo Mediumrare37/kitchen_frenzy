@@ -1,5 +1,4 @@
 <h1>Your pending booking requests</h1>
-<%= @bookings.each do |b| %>
-  <%= b.user.first_name %>
-  <%= b.user.email %>
-<% end %>
+<div class="cards">
+  <%= render 'owner/bookings/card' %>
+</div>
