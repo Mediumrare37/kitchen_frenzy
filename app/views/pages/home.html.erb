@@ -1,2 +1,8 @@
 <%= render 'layouts/card-grid' %>
-<%= render 'layouts/card-grid' %>
+<div class="kitchens">
+<% @kitchens.each do |kitchen| %>
+
+  <%= render 'layouts/card', kitchen: kitchen %>
+  <% end %>
+
+</div>
