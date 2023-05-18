@@ -1,0 +1,7 @@
+<%= simple_form_for kitchen, url: kitchen_path(kitchen), method: :patch, html: { id: 'edit-kitchen-form' } do |f| %>
+  <%= f.input :title %>
+  <%= f.input :details %>
+  <%= f.input :price_per_day %>
+  <%= f.input :location %>
+  <%= f.submit 'Save Changes', class: 'btn btn-primary' %>
+<% end %>
