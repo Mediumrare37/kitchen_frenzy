@@ -38,8 +38,7 @@
 
   .card-info {
   // display: flex;
-  padding: 5px;
-  margin-top: 3px;
+  padding: 8px 10px;
   // justify-content: space-between;
   // align-items: flex-end;
   // position: relative;
@@ -61,7 +60,8 @@
 }
 
 .card-info .card-info-details h3 {
-  font-weight: bold;
+  margin: 0;
+  // font-weight: bold;
   font-size: 15px;
   font: $body-font;
 }
@@ -76,16 +76,22 @@
 
 .card-info .card-info-rating p {
   font: $body-font;
-  font-size: 17px;
+  font-size: 14px;
   color: black;
 }
 
 .card-info .card-info-rating i {
   color: $kitchen-1;
+  font-size: 12px;
+
 }
 
 .card-info .card-info-icon {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  i {
+    padding-right: 3px;
+  }
 }
