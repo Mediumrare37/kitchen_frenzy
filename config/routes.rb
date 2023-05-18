@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   resources :bookings, only: [:index, :update]
 
   namespace :owner do
-    resources :bookings, only: [:index, :create]
+    resources :bookings, only: [:index, :create, :update]
   end
 
   # Other routes...
