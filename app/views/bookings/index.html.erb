@@ -1,7 +1,9 @@
 <h1> All my Bookings </h1>
 <% if @bookings.any? %>
   <div class="cards">
-    <%= render 'bookings/card' %>
+    <% @bookings.each do |booking| %>
+      <%= render 'bookings/card', booking: booking %>
+    <% end %>
   </div>
 <% else %>
   <p>You do not have any bookings yet.</p>
