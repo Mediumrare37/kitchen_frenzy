@@ -5,47 +5,38 @@
     </video>
     <h1 class="animate__animated animate__bounce">Welcome to the Frenzy!</h1>
     <p>Change your life and cook damnit!</p>
-    <a class="btn btn-flat" href="#" style="color: white; font-size: 24px;">Book now!</a>
-    <a class="btn btn-flat" href="#" style="color: white; font-size: 24px;">List now!</a>
+    <%= link_to "Book now!", kitchens_path, class: 'brown' %>
+    <%= link_to "List now!", new_kitchen_path, class: 'brown' %>
   </div>
 </div>
-
-
 <div class="container justify-content-center d-flex">
-
-<div class="card-container">
-
-
-<div class="user-voices" style="color: white;">
-  <h2 class="animate__bounceInLeft">User Voices 🔊</h2>
-</div>
-
-<div class="card-product animate__animated" data-controller="cardslide" data-action="scroll@window->cardslide#updateCard">
-  <img src="https://cdn.britannica.com/72/125172-050-1E266D04/Barack-Obama-2006.jpg" />
-  <div class="card-product-infos">
-    <h2>Give their front end guy a raise!</h2>
-    <p>Seriously KF is the best. Booked a few of their local kitchens to boost production for my new curry restaurant, and couldn't be happier!</p>
+  <div class="card-container">
+    <div class="user-voices" style="color: white;">
+      <h2 class="animate__bounceInLeft">User Voices 🔊</h2>
+    </div>
+    <div class="card-product animate__animated" data-controller="cardslide" data-action="scroll@window->cardslide#updateCard">
+      <img src="https://cdn.britannica.com/72/125172-050-1E266D04/Barack-Obama-2006.jpg" />
+      <div class="card-product-infos">
+        <h2>Give their front end guy a raise!</h2>
+        <p>Seriously KF is the best. Booked a few of their local kitchens to boost production for my new curry restaurant, and couldn't be happier!</p>
+      </div>
+    </div>
+    <div class="card-product animate__animated" data-controller="cardslide" data-action="scroll@window->cardslide#updateCard">
+      <img src="https://media.zenfs.com/en/shefinds_255/0e70d05ad2f9bfebb36664a0a35ff202" />
+      <div class="card-product-infos">
+        <h2>Great experience with Kitchen Frenzy!</h2>
+        <p>Needed a space to host a cooking class for a large group. The space was amazing and had all the equipment I could ever need.</p>
+      </div>
+    </div>
+    <div class="card-product animate__animated" data-controller="cardslide" data-action="scroll@window->cardslide#updateCard">
+      <img src="https://media.npr.org/assets/img/2011/11/16/house-ep723-movingon_sc40_0299_wide-bd3d16a7f8181a138dfdbe85191fdb29dcb18866-s1600-c85.webp" />
+      <div class="card-product-infos">
+        <h2>Kitchen frenzy saved my marriage.</h2>
+        <p>KF really came through with fast and friendly service! Also, their UI is the best I have ever seen.</p>
+      </div>
+    </div>
   </div>
 </div>
-
-<div class="card-product animate__animated" data-controller="cardslide" data-action="scroll@window->cardslide#updateCard">
-  <img src="https://media.zenfs.com/en/shefinds_255/0e70d05ad2f9bfebb36664a0a35ff202" />
-  <div class="card-product-infos">
-    <h2>Great experience with Kitchen Frenzy!</h2>
-    <p>Needed a space to host a cooking class for a large group. The space was amazing and had all the equipment I could ever need.</p>
-  </div>
-</div>
-
-<div class="card-product animate__animated" data-controller="cardslide" data-action="scroll@window->cardslide#updateCard">
-  <img src="https://media.npr.org/assets/img/2011/11/16/house-ep723-movingon_sc40_0299_wide-bd3d16a7f8181a138dfdbe85191fdb29dcb18866-s1600-c85.webp" />
-  <div class="card-product-infos">
-    <h2>Kitchen frenzy saved my marriage.</h2>
-    <p>KF really came through with fast and friendly service! Also, their UI is the best I have ever seen.</p>
-  </div>
-</div>
-</div>
-</div>
-
 <div class="footer">
   <div class="footer-links">
     <a href="#"><i class="fab fa-github"></i></a>
