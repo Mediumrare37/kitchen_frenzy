@@ -17,5 +17,6 @@
         <h3><strong>€<%= (k.price_per_day).to_i.to_s %></strong> day</h3>
       </div>
     </div>
+    <%= link_to '', kitchen_path(k), class: "card-link" %>
   </div>
 <% end %>

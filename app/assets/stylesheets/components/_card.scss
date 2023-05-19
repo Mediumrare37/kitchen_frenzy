@@ -1,12 +1,10 @@
 .card-kitchen {
+  position: relative;
   display: flex;
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 10px;
   flex-direction: column;
 }
 
@@ -37,12 +35,12 @@
 }
 
 .card-info {
-// display: flex;
-padding: 12px;
-margin-top: 3px;
-// justify-content: space-between;
-// align-items: flex-end;
-position: relative;
+  // display: flex;
+  padding: 12px;
+  margin-top: 3px;
+  // justify-content: space-between;
+  // align-items: flex-end;
+  position: relative;
 }
 
 .card-info .card-info-details h2 {
@@ -101,6 +99,14 @@ position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+}
+
+.card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
 // Smallest device

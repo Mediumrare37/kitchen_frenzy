@@ -1,0 +1,8 @@
+<div class="booking-card">
+  <h3>€<%= @kitchen.price_per_day %> / day</h3>
+  <div class="booking-price">
+    <p>Total for 30 days</p>
+    <p><strong>€<%= @kitchen.price_per_day * 30 %></strong></p>
+  </div>
+  <%= render 'kitchens/form' %>
+</div>
