@@ -4,13 +4,14 @@
 
 .card-booking {
   display: flex;
-  flex-direction: line;
+  flex-direction: row;
   background: white;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   margin-top: 10px;
   margin-bottom: 10px;
   height: 175px;
+  overflow: hidden;
 }
 
 .card-booking-image > img {
@@ -49,14 +50,42 @@
   margin: 0;
 }
 
-
 .card-booking-status {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: end;
   padding: 8px;
   flex-grow: 1;
+  padding-right: 100px;
+}
+
+.card-booking-status .booking-rejected {
+  color: $kitchen-red;
+}
+
+.card-booking-status .booking-accepted {
+  color: $kitchen-green;
+}
+
+.card-booking-status .button-green {
+  background: $kitchen-green;
+  padding: 8px;
+  border: 2px solid white;
+  border-radius: 8px;
+  color: white;
+  font-weight: bolder;
+  min-width: 150px;
+}
+
+.card-booking-status .button-red {
+  background: $kitchen-red;
+  padding: 8px;
+  border: 2px solid white;
+  border-radius: 8px;
+  color: white;
+  font-weight: bolder;
+  min-width: 150px;
 }
 
 // .card-booking-image > i {

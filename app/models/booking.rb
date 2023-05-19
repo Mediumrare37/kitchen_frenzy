@@ -1,5 +1,5 @@
 class Booking < ApplicationRecord
-  STATUS = [0, 1, 2]
+  STATUS = [0, 1, 2, 3]
 
   belongs_to :kitchen
   belongs_to :user
@@ -7,7 +7,7 @@ class Booking < ApplicationRecord
   validates :start_date, presence: true
   validates :end_date, presence: true
   # Trying stuff
-  enum :status, { pending: 0, accepted: 1, rejected: 2 }
+  enum :status, { pending: 0, accepted: 1, rejected: 2, past: 3 }
 
   scope :past, -> { where('end_date < ?', Date.today) }
   scope :future, -> { where('start_date > ?', Date.today) }
@@ -20,7 +20,7 @@ class Booking < ApplicationRecord
   scope :not_rejected, -> { where.not(status: :rejected) }
 
   def number_of_days
-    (start_date - end_date).to_i
+    (end_date - start_date).to_i
   end
 
   def price

@@ -1,27 +1,32 @@
-
-  <div class="card-booking">
-    <div class="card-booking-image">
-      <%= image_tag "kitchen_industrial.jpg" %>
-    </div>
-    <div class="card-booking-info">
-      <h2> <%= (booking.user.first_name).to_s + ' for ' + (booking.kitchen.title).to_s %></h2>
-      <p><%= 'Dates: From ' + (booking.start_date.to_s) + ' to ' + (booking.end_date).to_s %> </p>
-      <h3><%= '€' + booking.price.to_i.to_s %></h3>
-    </div>
-    <div class="card-booking-status">
-      <% if booking.pending? %>
-        <div>
-          <%= simple_form_for booking, url: owner_booking_path(booking) do |f| %>
-            <%= f.input :status, as: :hidden, input_html: { value: 'accepted'} %>
-            <%= f.button :submit, 'Accept', class:"brown" %>
-          <% end %>
-          <%= simple_form_for booking, url: owner_booking_path(booking) do |f| %>
-            <%= f.input :status, as: :hidden, input_html: { value: 'rejected'} %>
-            <%= f.button :submit, 'Reject', class:"brown" %>
-          <% end %>
-        </div>
-      <% else %>
+<div class="card-booking">
+  <div class="card-booking-image">
+    <%= image_tag "kitchen_industrial.jpg" %>
+  </div>
+  <div class="card-booking-info">
+    <h2> <%= (booking.user.first_name).to_s + ' for ' + (booking.kitchen.title).to_s %></h2>
+    <p><%= 'Dates: From ' + (booking.start_date.to_s) + ' to ' + (booking.end_date).to_s %> </p>
+    <h3><%= '€' + booking.price.to_i.to_s %></h3>
+  </div>
+  <div class="card-booking-status">
+    <% if booking.pending? %>
+      <div>
+        <%= simple_form_for booking, url: owner_booking_path(booking) do |f| %>
+          <%= f.input :status, as: :hidden, input_html: { value: 'accepted'} %>
+          <%= f.button :submit, 'Accept', class:"button-green" %>
+        <% end %>
+        <%= simple_form_for booking, url: owner_booking_path(booking) do |f| %>
+          <%= f.input :status, as: :hidden, input_html: { value: 'rejected'} %>
+          <%= f.button :submit, 'Reject', class:"button-red" %>
+        <% end %>
+      </div>
+    <% else %>
+      <% if booking.status.capitalize == 'Accepted'  %>
+        <h2 class="booking-accepted"><%= booking.status.capitalize %></h2>
+      <% elsif booking.status.capitalize == 'Rejected'  %>
+        <h2 class="booking-rejected"><%= booking.status.capitalize %></h2>
+      <% elsif booking.status.capitalize == 'Past'  %>
         <h2><%= booking.status.capitalize %></h2>
       <% end %>
-    </div>
+    <% end %>
   </div>
+</div>
