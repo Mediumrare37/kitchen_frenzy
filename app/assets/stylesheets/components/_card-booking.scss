@@ -1,0 +1,179 @@
+.cards-booking {
+  margin-top: 10px;
+}
+
+.card-booking {
+  display: flex;
+  flex-direction: row;
+  background: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 175px;
+  overflow: hidden;
+}
+
+.card-booking-image > img {
+  width: 150px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-booking-info {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  justify-content: center;
+  flex-grow: 2;
+}
+
+.card-booking-info h2 {
+  font-size: 25px;
+  font: $headers-font;
+  font-weight: bold;
+  margin: 0;
+  color: $kitchen-2;
+}
+
+.card-booking-info h3 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 25px;
+  font: $body-font;
+}
+
+.card-booking-info p {
+  font-size: 15px;
+  font: $body-font;
+  opacity: .7;
+  margin: 0;
+}
+
+.card-booking-status {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  padding: 8px;
+  flex-grow: 1;
+  padding-right: 100px;
+}
+
+.card-booking-status .booking-rejected {
+  color: $kitchen-red;
+}
+
+.card-booking-status .booking-accepted {
+  color: $kitchen-green;
+}
+
+.card-booking-status .button-green {
+  background: $kitchen-green;
+  padding: 8px;
+  border: 2px solid white;
+  border-radius: 8px;
+  color: white;
+  font-weight: bolder;
+  min-width: 150px;
+}
+
+.card-booking-status .button-red {
+  background: $kitchen-red;
+  padding: 8px;
+  border: 2px solid white;
+  border-radius: 8px;
+  color: white;
+  font-weight: bolder;
+  min-width: 150px;
+}
+
+// .card-booking-image > i {
+//   color: #8F2A14;
+//   position: absolute;
+//   top: 12px;
+//   right: 12px;
+//   font-size: 22px;
+// }
+
+// .card-booking-status .i {
+  //   color: $kitchen-1;
+  //   font-size: 12px;
+// }
+
+// .card-booking-status h2 {
+//   font-size: 25px;
+//   font: $headers-font;
+//   font-weight: bold;
+//   margin: 0;
+//   color: $kitchen-1;
+//   padding: 3px;
+//   border: 2px solid $kitchen-2;
+//   border-radius: 8px;
+// }
+
+// .card-info .card-info-rating {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   // position: absolute;
+//   // position of elements needs to be improved
+// }
+
+// .card-info .card-info-rating p {
+//   font: $body-font;
+//   font-size: 14px;
+//   color: black;
+// }
+
+
+// .card-info .card-info-icon {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+
+//   i {
+//     padding-right: 3px;
+//   }
+// }
+
+// .cards {
+//   display: grid;
+//   grid-template-columns: 1fr 1fr 1fr;
+//   grid-gap: 16px;
+// }
+
+// // Smallest device
+// @media (min-width: 100px) and (max-width: 575px) {
+//   .cards {
+//     grid-template-columns: 1fr;
+//   }
+// }
+
+// // Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) {
+//   .cards {
+//     grid-template-columns: 1fr;
+//   }
+// }
+
+// // Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) {
+//   .cards {
+//     grid-template-columns: 1fr 1fr;
+//   }
+// }
+
+// // Large devices (desktops, 992px and up)
+// @media (min-width: 992px) {
+//   .cards {
+//     grid-template-columns: 1fr 1fr 1fr;
+//   }
+// }
+
+// // Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) {
+//   .cards {
+//     grid-template-columns: 1fr 1fr 1fr;
+//   }
+// }

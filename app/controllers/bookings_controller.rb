@@ -4,7 +4,9 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.kitchen = @kitchen
     @booking.user = current_user
+    @booking.price = (@booking.end_date - @booking.start_date).to_i * @booking.kitchen.price_per_day
     if @booking.save
+
       flash[:success] = "Booked successfully!"
       redirect_to @kitchen
     else

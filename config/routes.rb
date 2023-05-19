@@ -9,10 +9,12 @@ Rails.application.routes.draw do
     resources :bookings, only: [:create]
   end
 
-  resources :bookings, only: [:index, :update]
+  resources :bookings, only: [:index, :update] do
+    resources :reviews, only: [:create]
+  end
 
   namespace :owner do
-    resources :bookings, only: [:index, :create]
+    resources :bookings, only: [:index, :create, :update]
   end
 
   # Other routes...

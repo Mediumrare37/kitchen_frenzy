@@ -1,0 +1,23 @@
+
+<div class="reviews">
+  <div class="reviews-count">
+    <%= icon("fa-solid", "star") %>
+    <p>5,0 · <%= pluralize(@reviews.count, 'comment') %></p>
+  </div>
+  <div class="review-cards">
+    <% @reviews.each do |review| %>
+      <div class="review-user">
+        <div class="review-info">
+          <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar" %>
+          <div class="user-info">
+            <p class="user-name"><%= review.user.first_name %></p>
+            <p class="user-date"><%= review.created_at.strftime("%B %Y") %></p>
+          </div>
+        </div>
+        <div class="review-content">
+          <p><%= review.content %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
