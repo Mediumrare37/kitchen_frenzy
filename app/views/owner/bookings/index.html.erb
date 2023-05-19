@@ -1,5 +1,45 @@
-<h1>Your pending booking requests</h1>
-<%= @bookings.each do |b| %>
-  <%= b.user.first_name %>
-  <%= b.user.email %>
-<% end %>
+<div class="container">
+  <ul class="nav tabs-underlined" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <span class="nav-link tab-underlined active" id="pending-tab" data-bs-toggle="tab" data-bs-target="#pending-tab-pane" role="tab" aria-controls="pending-tab-pane" aria-selected="true">Pending</span>
+    </li>
+    <li class="nav-item" role="presentation">
+      <span class="nav-link tab-underlined" id="accepted-tab" data-bs-toggle="tab" data-bs-target="#accepted-tab-pane" role="tab" aria-controls="accepted-tab-pane" aria-selected="false">Accepted</span>
+    </li>
+    <li class="nav-item" role="presentation">
+      <span class="nav-link tab-underlined" id="rejected-tab" data-bs-toggle="tab" data-bs-target="#rejected-tab-pane" role="tab" aria-controls="rejected-tab-pane" aria-selected="false">Rejected</span>
+    </li>
+  </ul>
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade py-3 show active" id="pending-tab-pane" role="tabpanel" aria-labelledby="pending-tab" tabindex="0">
+      This is the content for the Bookings tab. Notice in the tab HTML there is a href="#bookings". This is pointing to the id of this div..
+      <% @bookings.pending.each do |booking| %>
+        <%= booking %>
+        <div class="cards-booking">
+          <h1>Bookings Made to Your Kitchens</h1>
+          <%= render 'owner/bookings/card-booking', booking: booking %>
+        </div>
+      <% end %>
+    </div>
+    <div class="tab-pane fade py-3" id="accepted-tab-pane" role="tabpanel" aria-labelledby="accepted-tab" tabindex="0">
+      This is the content for the Requests tab. Notice in the tab HTML there is a href="#requests". This is pointing to the id of this div..
+      <% @bookings.accepted.each do |booking| %>
+        <%= booking %>
+        <div class="cards-booking">
+          <h1>Bookings Made to Your Kitchens</h1>
+          <%= render 'owner/bookings/card-booking', booking: booking %>
+        </div>
+      <% end %>
+    </div>
+    <div class="tab-pane fade py-3" id="rejected-tab-pane" role="tabpanel" aria-labelledby="rejected-tab" tabindex="0">
+      This is the content for the Conversations tab. Notice in the tab HTML there is a href="#converstations". This is pointing to the id of this div.
+      <% @bookings.rejected.each do |booking| %>
+        <%= booking %>
+        <div class="cards-booking">
+          <h1>Bookings Made to Your Kitchens</h1>
+          <%= render 'owner/bookings/card-booking', booking: booking%>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

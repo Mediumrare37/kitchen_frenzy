@@ -18,20 +18,33 @@
   </div>
   <%= render 'shared/flashes' %>
   <div class="content">
-    <div class="content-img"></div>
-      <%# <img src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"> %>
-    <div class="booking-card">
-      <h3>€<%= @kitchen.price_per_day %> / day</h3>
-      <div class="booking-price">
-        <p>Total for 30 days</p>
-        <p><strong>€<%= @kitchen.price_per_day * 30 %></strong></p>
+    <div class="img-grid">
+      <div class="img1">
+        <%= image_tag "kitchen_industrial.jpg" %>
       </div>
-      <%= render 'kitchens/form' %>
+      <div class="img2">
+        <%= image_tag "kitchen_industrial.jpg" %>
+      </div>
+      <div class="img3">
+        <%= image_tag "kitchen_industrial.jpg" %>
+      </div>
+      <div class="img4">
+        <%= image_tag "kitchen_industrial.jpg" %>
+      </div>
+      <div class="img5">
+        <%= image_tag "kitchen_industrial.jpg" %>
+      </div>
+    </div>
+
+    <div class="details-container">
+      <div class="details">
+        <h2>Kitchen Description</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam vero asperiores neque exercitationem necessitatibus harum enim hic fugiat eveniet, ipsam consequatur expedita quidem quas numquam cupiditate accusamus et, eligendi nemo! Reprehenderit impedit amet error est ullam, ad illo in fuga, ipsum repudiandae voluptate possimus inventore praesentium nam. Laudantium, mollitia facere?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae, aliquam deleniti expedita qui eum quidem exercitationem in libero quo, corrupti cumque officiis nihil consequatur vitae explicabo nulla? Molestiae, perferendis qui, error doloribus deserunt expedita tempora placeat repudiandae omnis rem obcaecati.</p>
+      </div>
+      <%= render 'kitchens/form_booking' %>
     </div>
   </div>
-  <div class="details">
-    <h2>Kitchen Description</h2>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam vero asperiores neque exercitationem necessitatibus harum enim hic fugiat eveniet, ipsam consequatur expedita quidem quas numquam cupiditate accusamus et, eligendi nemo! Reprehenderit impedit amet error est ullam, ad illo in fuga, ipsum repudiandae voluptate possimus inventore praesentium nam. Laudantium, mollitia facere?</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae, aliquam deleniti expedita qui eum quidem exercitationem in libero quo, corrupti cumque officiis nihil consequatur vitae explicabo nulla? Molestiae, perferendis qui, error doloribus deserunt expedita tempora placeat repudiandae omnis rem obcaecati.</p>
-  </div>
+  <hr>
+  <%= render 'kitchens/reviews' %>
 </div>

@@ -1,0 +1,11 @@
+<h1>Edit Listing!</h1>
+
+<%= form_with(model: @kitchen, local: true) do |form| %>
+  <%= form.label :title %>
+  <%= form.text_field :title %>
+  <%= form.text_field :details %>
+  <%= form.text_field :price_per_day %>
+  <!-- Add other fields you want to edit -->
+
+  <%= form.submit class: "btn btn-primary" %>
+<% end %>

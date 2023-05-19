@@ -1,6 +1,6 @@
 .dynamic-info {
   margin-bottom: 8px;
-  width: 400px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 
@@ -59,6 +59,15 @@
   }
 }
 
-.details {
-  margin-top: 24px;
+.details-container {
+  display: flex;
+  gap: 42px;
+
+  .details {
+    flex: 2;
+  }
+
+  .booking-card {
+    flex: 1;
+  }
 }

@@ -1,15 +1,23 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
-  resources :kitchens, only: [:index, :show, :new, :create] do
+
+  resources :kitchens, only: [:index, :show, :new, :create, :destroy, :edit] do
+    member do
+      delete 'kitchens/', action: :destroy
+    end
     resources :bookings, only: [:create]
   end
-  resources :bookings, only: [:index, :update]
+
+  resources :bookings, only: [:index, :update] do
+    resources :reviews, only: [:create]
+  end
 
   namespace :owner do
-    resources :bookings, only: [:index, :create]
+    resources :bookings, only: [:index, :create, :update]
   end
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+
+  # Other routes...
 
   # Defines the root path route ("/")
   # root "articles#index"
