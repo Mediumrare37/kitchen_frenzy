@@ -56,6 +56,7 @@ gem "cloudinary"
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
+gem 'pexels', '~> 0.5.0'
 gem "faker"
 gem "autoprefixer-rails"
 gem "font-awesome-sass", "~> 6.1"

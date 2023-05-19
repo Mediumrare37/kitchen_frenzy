@@ -1,5 +1,6 @@
 require 'yaml'
 require 'open-uri'
+require 'pexels'
 
 puts "Cleaning the db..."
 User.destroy_all
@@ -18,14 +19,16 @@ serialized_addresses = URI.open(addresses_url).read
 addresses = ["913-14 Jogasawa, Mutsu shi, Aomori ken","611-3 Nikkocho, Moriguchi shi, Osaka fu","965-10 Sanjocho, Ashiya shi, Hyogo ken","996-8 Oba, Hitachiomiya shi, Ibaraki ken"]
 
 addresses.first(4).each do |address|
-  john.kitchens << Kitchen.new({
+  new_kitchen = Kitchen.new({
     title: Faker::Restaurant.name,
     location: address,
     details: "Insert details here",
     price_per_day: rand(1..99) * 100
-  })
+    })
+    file = URI.open("https://www.ikea.com/images/5c/3d/5c3d05d29bd96d6132bc9b6ed243eebc.jpg?f=m")
+    new_kitchen.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+  john.kitchens << new_kitchen
 end
-
 puts "Created #{Kitchen.count} kitchens!"
 
 5.times do
