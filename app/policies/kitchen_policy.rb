@@ -11,7 +11,7 @@ class KitchenPolicy < ApplicationPolicy
     record.user == user
   end
 
-  def update
+  def update?
     record.user == user
   end
 
