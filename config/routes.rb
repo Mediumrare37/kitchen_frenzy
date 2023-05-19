@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   end
 
   # Other routes...
-  get 'kitchens/new', to: 'kitchens#new', as: 'new_kitchen'
+  # get 'kitchens/new', to: 'kitchens#new', as: 'new_kitchen'
 
   # Defines the root path route ("/")
 
