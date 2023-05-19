@@ -1,0 +1,22 @@
+.kitchen-container {
+  margin: 0 20px;
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.form-container {
+  position: sticky;
+  border-radius: 8px;
+  border: 1px solid rgb(221, 221, 221);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 6px 16px;
+  padding: 20px;
+  flex: 1;
+}
+
+.kitchens-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex: 1;
+}
