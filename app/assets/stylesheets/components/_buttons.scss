@@ -43,4 +43,15 @@ a.button-secondary {
   color: white;
   font-weight: bolder;
   min-width: 100px;
+  text-decoration: none;
+}
+
+.home-button {
+  background: $kitchen-1;
+  padding: 8px;
+  border-radius: 8px;
+  color: white;
+  min-width: 200px;
+  text-decoration: none;
+  border: 1px solid white;
 }
