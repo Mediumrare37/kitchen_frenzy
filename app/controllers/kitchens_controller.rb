@@ -45,12 +45,13 @@ class KitchensController < ApplicationController
   end
 
   def update
+    @kitchen = Kitchen.find(params[:id])
     authorize @kitchen
 
     if @kitchen.update(kitchen_params)
       redirect_to new_kitchen_path, notice: 'Kitchen was successfully updated.'
     else
-      render :edit, status: :unprocessable_entity
+      render :edit
     end
   end
 
