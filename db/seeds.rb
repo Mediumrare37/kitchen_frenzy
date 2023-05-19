@@ -25,8 +25,8 @@ addresses.first(4).each do |address|
     details: "Insert details here",
     price_per_day: rand(1..99) * 100
     })
-    file = URI.open("https://www.ikea.com/images/5c/3d/5c3d05d29bd96d6132bc9b6ed243eebc.jpg?f=m")
-    new_kitchen.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+    file = URI.open("https://www.ronenbekerman.com/wp-content/uploads/2017/02/kitchen-2-geniko-full-HD.jpg")
+    new_kitchen.photo.attach(io: file, filename: "kitchen.jpg", content_type: "image/jpg")
   john.kitchens << new_kitchen
 end
 puts "Created #{Kitchen.count} kitchens!"
