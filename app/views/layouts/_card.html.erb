@@ -1,7 +1,7 @@
 <% @kitchens.each do |k| %>
   <div class="card-kitchen">
     <div class="card-image">
-      <%= cl_image_tag k.photo.key %>
+      <%= cl_image_tag k.photo.key, height: 233, crop: :fill %>
       <%= icon("fa-solid", "heart") %>
     </div>
     <div class="card-info">
