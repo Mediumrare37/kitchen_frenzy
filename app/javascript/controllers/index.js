@@ -4,8 +4,14 @@
 
 import { application } from "./application"
 
+import CardslideController from "./cardslide_controller"
+application.register("cardslide", CardslideController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
 import MapController from "./map_controller"
 application.register("map", MapController)
+
+import NavbarController from "./navbar_controller"
+application.register("navbar", NavbarController)

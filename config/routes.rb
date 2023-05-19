@@ -7,10 +7,10 @@ Rails.application.routes.draw do
       delete 'kitchens/', action: :destroy
     end
     resources :bookings, only: [:create]
+    resources :reviews, only: [:create, :new]
   end
 
   resources :bookings, only: [:index, :update] do
-    resources :reviews, only: [:create]
   end
 
   namespace :owner do

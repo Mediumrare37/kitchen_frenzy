@@ -1,0 +1,7 @@
+<div class="container">
+  <h1><%= 'Leave a Review for your booking at ' + (@kitchen.title).to_s %>  </h1>
+  <%= simple_form_for [@kitchen, @review] do |f| %>
+    <%= f.input :content, font:'$body-font' %>
+    <%= f.button :submit, class:"brown" %>
+  <% end %>
+</div>

@@ -1,15 +1,22 @@
-<% @bookings.each do |booking| %>
-  <div class="card-kitchen">
-    <div class="card-image">
-      <%= image_tag "kitchen_industrial.jpg" %>
-    </div>
-    <div class="card-info">
-      <div class="card-info-details">
-        <h2><%= booking.kitchen.title %></h2>
-        <p><%= booking.kitchen.location %></p>
-        <p><%= booking.status %></p>
-        <h3><%= '€' + (booking.kitchen.price_per_day).to_i.to_s + ' per day' %></h3>
-      </div>
-    </div>
+<div class="card-booking">
+  <div class="card-booking-image">
+    <%= image_tag "kitchen_industrial.jpg" %>
   </div>
-<% end %>
+  <div class="card-booking-info">
+    <h2> <%= (booking.user.first_name).to_s + ' for ' + (booking.kitchen.title).to_s %></h2>
+    <p><%= 'Dates: From ' + (booking.start_date.to_s) + ' to ' + (booking.end_date).to_s %> </p>
+    <h3><%= '€' + booking.price.to_i.to_s %></h3>
+  </div>
+  <div class="card-booking-status">
+    <% if booking.end_date < Date.today  %>
+      <h2><%= booking.status.capitalize %></h2>
+      <%= link_to "Leave a Review", new_kitchen_review_path(booking.kitchen), class:'brown' %>
+    <% elsif booking.status.capitalize == 'Accepted'  %>
+      <h2 class="booking-accepted"><%= booking.status.capitalize %></h2>
+    <% elsif booking.status.capitalize == 'Rejected'  %>
+      <h2 class="booking-rejected"><%= booking.status.capitalize %></h2>
+    <% elsif booking.status.capitalize == 'Pending'  %>
+      <h2><%= booking.status.capitalize %></h2>
+    <% end %>
+  </div>
+</div>
