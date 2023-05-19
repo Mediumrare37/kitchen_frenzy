@@ -2,12 +2,13 @@
   margin-bottom: 8px;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
 
   .icons {
     display: flex;
     align-items: center;
     gap: 5px;
+    margin-right: 20px;
 
     font: {
       size: 15px;

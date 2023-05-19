@@ -9,7 +9,7 @@
   </div>
   <div class="card-booking-status">
     <% if booking.end_date < Date.today  %>
-      <h2><%= booking.status.capitalize %></h2>
+      <h2>Past</h2>
       <%= link_to "Leave a Review", new_kitchen_review_path(booking.kitchen), class:'brown' %>
     <% elsif booking.status.capitalize == 'Accepted'  %>
       <h2 class="booking-accepted"><%= booking.status.capitalize %></h2>
