@@ -1,8 +1,5 @@
-<%= render 'layouts/card-grid' %>
 <div class="kitchens">
-<% @kitchens.each do |kitchen| %>
-
-  <%= render 'layouts/card', kitchen: kitchen %>
+  <% @kitchens.each do |kitchen| %>
+    <%= render 'layouts/card', kitchen: kitchen %>
   <% end %>
-
 </div>
