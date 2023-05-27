@@ -1,17 +1,18 @@
 .video-background {
   position: fixed;
   right: 0;
-  bottom: 0;
+  bottom: 127px;
   max-width: 100%;
-  height: auto;
-  z-index: -1;
+  /* height: auto; */
   overflow: hidden;
+  /* max-height: 100vh; */
+  height: 100%;
 }
 
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
+  // padding: 150px 0;
   position: relative;
   height: 100vh;
 }
@@ -101,11 +102,11 @@
 }
 
 
-// #video-container {
-//   position: relative;
-//   height: 100%;
-//   overflow: hidden;
-// }
+#video-container {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
 
 // .video-background {
 //   position: absolute;
