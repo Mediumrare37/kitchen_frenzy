@@ -1,22 +1,20 @@
-<% @kitchens.each do |k| %>
-  <div id="kitchen" class="card-kitchen">
-    <div class="card-image">
-      <%= cl_image_tag k.photo.key, height: 233, crop: :fill %>
-      <%= icon("fa-solid", "heart") %>
-    </div>
-    <div class="card-info">
-      <div class="card-info-details">
-        <div class="card-info-rating">
-          <h2><%= k.title %></h2>
-          <div class="card-info-icon">
-            <%= icon("fa-solid fa-star", "color: #d29a64" ) %>
-            <p>4.58</p>
-          </div>
-        </div>
-        <p><%= k.location %></p>
-        <h3><strong>€<%= (k.price_per_day).to_i.to_s %></strong> day</h3>
-      </div>
-    </div>
-    <%= link_to '', kitchen_path(k), class: "card-link" %>
+<div id="kitchen" class="card-kitchen">
+  <div class="card-image">
+    <%= cl_image_tag kitchen.photo.key, height: 233, crop: :fill %>
+    <%= icon("fa-solid", "heart") %>
   </div>
-<% end %>
+  <div class="card-info">
+    <div class="card-info-details">
+      <div class="card-info-rating">
+        <h2><%= kitchen.title %></h2>
+        <div class="card-info-icon">
+          <%= icon("fa-solid fa-star", "color: #d29a64" ) %>
+          <p>4.58</p>
+        </div>
+      </div>
+      <p><%= kitchen.location %></p>
+      <h3><strong>€<%= (kitchen.price_per_day).to_i.to_s %></strong> day</h3>
+    </div>
+  </div>
+  <%= link_to '', kitchen_path(kitchen), class: "card-link" %>
+</div>

@@ -1,15 +1,18 @@
 <div class="banner">
-  <div id="video-container" style='background-image: url("<%= cl_image_path 'images/new_banner.jpg' %>")'' >
-    <%# <video class="video-background" autoplay loop muted>
-      <source src="<%= asset_path('banner-video') >" type="video/mp4">
-    </video> %>
+  <div class="home-container">
     <h1 class="animate__animated animate__bounce">Welcome to the Frenzy!</h1>
-    <p>Change your life and cook damnit!</p>
+    <p>Launch your Cloud Restaurant anywhere </p>
     <%= link_to "Book Kitchen Space", kitchens_path, class: 'home-button' %>
-    <%= link_to "Kitchen Owners", new_kitchen_path, class: 'home-button' %>
+    <%= link_to "For Kitchen Owners", new_kitchen_path, class: 'home-button' %>
   </div>
 </div>
-<%= render 'layouts/card-grid' %>
+<div class="container-fluid">
+  <div class="carrousels-container">
+    <%= render partial: 'layouts/card-grid', locals: { category_title: 'Recently Added', category: 'recent' } %>
+    <%= render partial: 'layouts/card-grid', locals: { category_title: 'Kitchens Near Me', category: 'near' } %>
+    <%= render partial: 'layouts/card-grid', locals: { category_title: 'Industrial Kitchens', category: 'industrial' } %>
+  </div>
+</div>
 <div class="footer">
   <div class="footer-links">
     <a href="#"><i class="fab fa-github"></i></a>
