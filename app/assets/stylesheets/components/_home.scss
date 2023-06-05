@@ -1,69 +1,71 @@
-.video-background {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  max-width: 100%;
-  height: auto;
-  z-index: -1;
-  overflow: hidden;
-}
-
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
-  position: relative;
+  // padding: 150px 0;
+  // position: relative;
+  // height: 100vh;
   height: 100vh;
+  background-image: url("kitchen_domestic.jpg");
+  margin-bottom: 40px;
 }
 
-.banner h1 {
-  margin: 0;
+.home-container {
+  text-align: center;
+  padding-top: 240px;
+}
+
+.home-container h1 {
+  margin-bottom: 5px;
   color: white;
   text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
+  font-family: $headers-font;
   font-size: 40px;
   font-weight: bold;
 }
 
-.banner p {
+.home-container p {
+  font-family: $body-font;
   font-size: 32px;
   color: white;
   opacity: .7;
   text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
+  margin-bottom: 20px;
 }
 
-.user-voices h2 {
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
+.home-container a {
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .footer {
   background: #F4F4F4;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100px;
-  padding: 0px 50px;
-  color: rgba(0,0,0,0.3);
-  border-radius: 8px;
-}
-.footer-links {
-  display: flex;
-  align-items: center;
-}
-.footer-links a {
-  color: black;
-  opacity: 0.15;
-  text-decoration: none;
-  font-size: 24px;
-  padding: 0px 10px;
-}
-.footer-links a:hover {
-  opacity: 1;
-}
-.footer .fa-heart {
-  color: #D23333;
-}
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    padding: 0px 50px;
+    color: rgba(0,0,0,0.3);
+    border-radius: 8px;
+  }
+  .footer-links {
+    display: flex;
+    align-items: center;
+  }
+  .footer-links a {
+    color: black;
+    opacity: 0.15;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 0px 10px;
+  }
+  .footer-links a:hover {
+    opacity: 1;
+  }
+  .footer .fa-heart {
+    color: #D23333;
+  }
 
-.card-product {
+  .card-product {
   overflow: hidden;
   height: 120px;
   background: white;
@@ -100,32 +102,40 @@
   padding: 16px;
 }
 
-
-// #video-container {
-//   position: relative;
-//   height: 100%;
-//   overflow: hidden;
-// }
-
 // .video-background {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: auto;
-//   min-width: 100%;
-//   min-height: 100%;
-//   z-index: -1;
-// }
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: auto;
+  //   min-width: 100%;
+  //   min-height: 100%;
+  //   z-index: -1;
+  // }
 
-// .content {
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   text-align: center;
-// }
+  // .content {
+    //   position: absolute;
+    //   top: 50%;
+    //   left: 50%;
+    //   transform: translate(-50%, -50%);
+    //   text-align: center;
+    // }
 
-// .user-voices {
-//   padding: 0px;
-// }
+    // .user-voices {
+      //   padding: 0px;
+      // }
+
+      // .video-background {
+        //   position: fixed;
+        //   right: 0;
+        //   bottom: 127px;
+        //   max-width: 100%;
+        //   /* height: auto; */
+        //   overflow: hidden;
+        //   /* max-height: 100vh; */
+        //   height: 100%;
+        // }
+
+        // .user-voices h2 {
+          //   text-shadow: 2px 2px 6px rgba(0,0,0,0.9);
+          // }

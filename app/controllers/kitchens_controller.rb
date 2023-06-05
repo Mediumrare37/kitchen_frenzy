@@ -6,10 +6,11 @@ class KitchensController < ApplicationController
     @kitchens = policy_scope(Kitchen)
 
     # Map display
-    @markers = @kitchens.geocoded.map do |flat|
+    @markers = @kitchens.geocoded.map do |kitchen|
       {
-        lat: flat.latitude,
-        lng: flat.longitude
+        lat: kitchen.latitude,
+        lng: kitchen.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: { kitchen: kitchen })
       }
     end
   end

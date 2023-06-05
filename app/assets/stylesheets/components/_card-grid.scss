@@ -16,10 +16,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-left: 5px;
-  margin-right: 5px;
-  margin-bottom: 5px;
-  margin-top: 12px;
+  margin-bottom: 60px;
+  margin-top: 25px;
 }
 
 .arrow-button {
@@ -37,57 +35,57 @@
   display: none;
 }
 
-// Smallest device
-@media (min-width: 100px) and (max-width: 575px) {
-  .kitchens{
-    grid-template-columns: 1fr;
-    display: none;
-  }
-  .container-category {
-    display: block;
-  }
-}
+// // Smallest device
+// @media (min-width: 100px) and (max-width: 575px) {
+//   .kitchens{
+//     grid-template-columns: 1fr;
+//     display: none;
+//   }
+//   .container-category {
+//     display: block;
+//   }
+// }
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-  .kitchens{
-    grid-template-columns: 1fr;
-    display: none;
-  }
-  .container-category {
-    display: block;
-  }
-}
+// // Small devices (landscape phones, 576px and up)
+// @media (min-width: 576px) {
+//   .kitchens{
+//     grid-template-columns: 1fr;
+//     display: none;
+//   }
+//   .container-category {
+//     display: block;
+//   }
+// }
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-  .kitchens{
-    grid-template-columns: 1fr 1fr;
-    display: grid;
-  }
-  .container-category {
-    display: none;
-  }
-}
+// // Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) {
+//   .kitchens{
+//     grid-template-columns: 1fr 1fr;
+//     display: grid;
+//   }
+//   .container-category {
+//     display: none;
+//   }
+// }
 
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-  .kitchens{
-    grid-template-columns: 1fr 1fr 1fr;
-    display: grid;
-  }
-  .container-category {
-    display: none;
-  }
-}
+// // Large devices (desktops, 992px and up)
+// @media (min-width: 992px) {
+//   .kitchens{
+//     grid-template-columns: 1fr 1fr 1fr;
+//     display: grid;
+//   }
+//   .container-category {
+//     display: none;
+//   }
+// }
 
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-  .kitchens{
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    display: grid;
-  }
-  .container-category {
-    display: none;
-  }
-}
+// // Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) {
+//   .kitchens{
+//     grid-template-columns: 1fr 1fr 1fr 1fr;
+//     display: grid;
+//   }
+//   .container-category {
+//     display: none;
+//   }
+// }

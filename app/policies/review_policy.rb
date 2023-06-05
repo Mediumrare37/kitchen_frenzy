@@ -12,6 +12,7 @@ class ReviewPolicy < ApplicationPolicy
 
   def create?
     # it should be != to user, but leaving == for demo purposes
-    record.kitchen.user == user
+    # record.kitchen.user == user
+    true
   end
 end

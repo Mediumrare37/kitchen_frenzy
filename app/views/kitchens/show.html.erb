@@ -5,12 +5,10 @@
       <%= icon("fa-regular", "star") %>
       <p>4.58</p>
     </div>
-
     <div class="icons">
       <%= icon("fa-regular", "map") %>
       <p><%= @kitchen.location %></p>
     </div>
-
     <div class="icons">
       <%= icon("fa-regular", "heart") %>
       <p>Save to Favourites</p>
@@ -35,12 +33,10 @@
         <%= image_tag "kitchen_industrial.jpg" %>
       </div>
     </div>
-
     <div class="details-container">
       <div class="details">
         <h2>Kitchen Description</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam vero asperiores neque exercitationem necessitatibus harum enim hic fugiat eveniet, ipsam consequatur expedita quidem quas numquam cupiditate accusamus et, eligendi nemo! Reprehenderit impedit amet error est ullam, ad illo in fuga, ipsum repudiandae voluptate possimus inventore praesentium nam. Laudantium, mollitia facere?</p>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae, aliquam deleniti expedita qui eum quidem exercitationem in libero quo, corrupti cumque officiis nihil consequatur vitae explicabo nulla? Molestiae, perferendis qui, error doloribus deserunt expedita tempora placeat repudiandae omnis rem obcaecati.</p>
+        <p><%= @kitchen.details %></p>
       </div>
       <%= render 'kitchens/form_booking' %>
     </div>
